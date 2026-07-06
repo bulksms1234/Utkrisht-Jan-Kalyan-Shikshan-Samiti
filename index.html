@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utkrisht Jan Kalyan Shikshan Samiti</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f8faff;
+      color: #1e2b3c;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 32px;
+      box-shadow: 0 20px 40px -12px rgba(0, 20, 30, 0.15);
+      padding: 2rem 2.5rem;
+      transition: 0.2s;
+    }
+
+    /* header / identity */
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e6edf5;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .brand h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #0b2a41;
+    }
+
+    .brand h1 i {
+      color: #2a7faa;
+      margin-right: 8px;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.2rem;
+      background: #f0f5fc;
+      padding: 0.6rem 1.4rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .badge-group span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-group i {
+      color: #2a7faa;
+      width: 1.1rem;
+    }
+
+    /* cards / sections */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: #0b2a41;
+      border-left: 6px solid #2a7faa;
+      padding-left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: #2a7faa;
+      font-size: 1.6rem;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .info-card {
+      background: #f9fcff;
+      border-radius: 24px;
+      padding: 1.5rem 1.8rem;
+      border: 1px solid #e9f0f8;
+      transition: 0.15s;
+      box-shadow: 0 4px 6px -4px rgba(0,0,0,0.02);
+    }
+
+    .info-card:hover {
+      border-color: #cbddee;
+      background: white;
+      box-shadow: 0 8px 16px -8px rgba(20, 60, 100, 0.08);
+    }
+
+    .info-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1e3b55;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card h3 i {
+      color: #2a7faa;
+      width: 1.8rem;
+    }
+
+    .info-card p, .info-card li {
+      color: #1f3449;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .info-card ul li {
+      padding: 0.3rem 0;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: 1px dashed #e3ecf5;
+    }
+
+    .info-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .info-card ul li i {
+      color: #2a7faa;
+      width: 1.4rem;
+      font-size: 1rem;
+    }
+
+    .service-desc {
+      background: #eef5fc;
+      border-radius: 18px;
+      padding: 1.2rem 1.6rem;
+      margin-top: 0.8rem;
+      border-left: 4px solid #2a7faa;
+      font-style: italic;
+      color: #1a3146;
+    }
+
+    .service-desc i {
+      color: #2a7faa;
+      margin-right: 6px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-details a {
+      color: #1e3b55;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .contact-details a:hover {
+      color: #2a7faa;
+      text-decoration: underline;
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .legal-card {
+      background: #fafdff;
+      border-radius: 24px;
+      padding: 1.6rem 1.8rem;
+      border: 1px solid #e2edf8;
+    }
+
+    .legal-card h4 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0b2a41;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legal-card h4 i {
+      color: #2a7faa;
+    }
+
+    .legal-card p, .legal-card li {
+      font-size: 0.98rem;
+      color: #1f3449;
+    }
+
+    .legal-card ul {
+      padding-left: 1.4rem;
+    }
+
+    .legal-card ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .copyright-footer {
+      margin-top: 2.5rem;
+      padding-top: 1.8rem;
+      border-top: 2px solid #e6edf5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #3a5770;
+      font-size: 0.95rem;
+    }
+
+    .copyright-footer i {
+      color: #2a7faa;
+      margin: 0 4px;
+    }
+
+    .copyright-footer a {
+      color: #1e3b55;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .copyright-footer a:hover {
+      color: #2a7faa;
+      text-decoration: underline;
+    }
+
+    /* responsive */
+    @media (max-width: 820px) {
+      .container { padding: 1.5rem; }
+      .brand { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .brand h1 { font-size: 2rem; }
+      .grid-2col { grid-template-columns: 1fr; }
+      .legal-grid { grid-template-columns: 1fr; }
+      .badge-group { border-radius: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 1rem; }
+      .brand h1 { font-size: 1.6rem; }
+      .section-title { font-size: 1.4rem; }
+      .info-card { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== BUSINESS IDENTITY ===== -->
+  <div class="brand">
+    <h1><i class="fas fa-seedling"></i> Utkrisht Jan Kalyan Shikshan Samiti</h1>
+    <div class="badge-group">
+      <span><i class="fas fa-tag"></i> Micro</span>
+      <span><i class="fas fa-briefcase"></i> Services</span>
+      <span><i class="fas fa-users"></i> OBC</span>
+      <span><i class="fas fa-calendar-alt"></i> 27/01/2023</span>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT & ADDRESS ===== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-address-card"></i> Contact &amp; Address
+    </div>
+    <div class="grid-2col">
+      <div class="info-card">
+        <h3><i class="fas fa-map-pin"></i> Office</h3>
+        <p><strong>Selud, Block Patan, Utai,</strong><br />Durg, Chhattisgarh – 491107</p>
+        <div style="margin-top: 1rem; background: #e4eefa; padding: 0.5rem 1rem; border-radius: 40px; display: inline-block;">
+          <i class="fas fa-flag" style="color:#2a7faa;"></i> India
+        </div>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-phone-alt"></i> Reach us</h3>
+        <div class="contact-details">
+          <span><i class="fas fa-mobile-alt" style="width:1.8rem; color:#2a7faa;"></i> <a href="tel:+918770657014">8770657014</a></span>
+          <span><i class="fas fa-envelope" style="width:1.8rem; color:#2a7faa;"></i> <a href="mailto:utkristjankalyanshikshansamiti@gmail.com">utkristjankalyanshikshansamiti@gmail.com</a></span>
+          <span><i class="fas fa-globe" style="width:1.8rem; color:#2a7faa;"></i> (web presence coming soon)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES OFFERED ===== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-code"></i> Services
+    </div>
+    <div class="info-card" style="background: #f5faff;">
+      <h3><i class="fas fa-laptop-code"></i> Computer Programming, Consultancy &amp; Related Activities</h3>
+      <ul>
+        <li><i class="fas fa-pen-fancy"></i> Writing, modifying, and testing computer programs</li>
+        <li><i class="fas fa-user-check"></i> Tailored to meet the needs of a particular client</li>
+        <li><i class="fas fa-ban" style="color:#9babbd;"></i> <span style="color:#4a5f73;">(excluding web-page designing)</span></li>
+      </ul>
+      <div class="service-desc">
+        <i class="fas fa-cogs"></i> Custom software development / programming services provider, specializing in client-specific software solutions.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRIVACY POLICY + TERMS & CONDITIONS + CONTACT PAGE (combined) ===== -->
+  <div class="section">
+    <div class="section-title">
+      <i class="fas fa-gavel"></i> Policies &amp; Legal
+    </div>
+    <div class="legal-grid">
+      <!-- Privacy Policy -->
+      <div class="legal-card">
+        <h4><i class="fas fa-shield-alt"></i> Privacy Policy</h4>
+        <p><strong>Utkrisht Jan Kalyan Shikshan Samiti</strong> respects your privacy. Any personal information you provide (e.g., via email or phone) is used solely to respond to your inquiries and deliver our programming services. We do not share, sell, or rent your data to third parties. Data is stored securely and only retained as long as necessary for service fulfillment.</p>
+        <ul style="margin-top: 0.6rem;">
+          <li><i class="fas fa-check-circle" style="color:#2a7faa;"></i> Information collected is minimal and service-oriented.</li>
+          <li><i class="fas fa-check-circle" style="color:#2a7faa;"></i> You may request data removal at any time.</li>
+          <li><i class="fas fa-check-circle" style="color:#2a7faa;"></i> Cookies are not used on this static page.</li>
+        </ul>
+      </div>
+      <!-- Terms & Conditions -->
+      <div class="legal-card">
+        <h4><i class="fas fa-file-contract"></i> Terms &amp; Conditions</h4>
+        <p>By engaging our services, you agree to the following:</p>
+        <ul>
+          <li><strong>Scope:</strong> Custom programming, consultancy, and software solutions (excluding web design).</li>
+          <li><strong>Delivery:</strong> Timelines and deliverables are mutually agreed in writing.</li>
+          <li><strong>Payment:</strong> Terms are specified per project; all fees are in INR unless stated otherwise.</li>
+          <li><strong>Confidentiality:</strong> We treat your project details and data with strict confidentiality.</li>
+          <li><strong>Governing Law:</strong> Jurisdiction – Durg, Chhattisgarh, India.</li>
+        </ul>
+      </div>
+      <!-- Contact Page (additional info) -->
+      <div class="legal-card" style="grid-column: 1 / -1; background: #f3f8ff;">
+        <h4><i class="fas fa-address-book"></i> Contact Page</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; margin-top: 0.4rem;">
+          <div>
+            <i class="fas fa-map-marker-alt" style="color:#2a7faa; width:1.6rem;"></i>
+            <strong>Address:</strong> Selud, Block Patan, Utai, Durg, Chhattisgarh - 491107
+          </div>
+          <div>
+            <i class="fas fa-phone" style="color:#2a7faa; width:1.6rem;"></i>
+            <a href="tel:+918770657014">8770657014</a>
+          </div>
+          <div>
+            <i class="fas fa-envelope" style="color:#2a7faa; width:1.6rem;"></i>
+            <a href="mailto:utkristjankalyanshikshansamiti@gmail.com">utkristjankalyanshikshansamiti@gmail.com</a>
+          </div>
+          <div>
+            <i class="fas fa-clock" style="color:#2a7faa; width:1.6rem;"></i>
+            Mon–Sat, 10:00 AM – 6:00 PM (IST)
+          </div>
+        </div>
+        <p style="margin-top: 0.8rem; background: #e3effa; padding: 0.5rem 1.2rem; border-radius: 40px; display: inline-block;">
+          <i class="fas fa-paper-plane" style="color:#2a7faa;"></i> We respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COPYRIGHT & FOOTER ===== -->
+  <div class="copyright-footer">
+    <div>
+      <i class="far fa-copyright"></i> 2026 Utkrisht Jan Kalyan Shikshan Samiti. 
+      <span style="margin-left: 0.3rem;">All rights reserved.</span>
+    </div>
+    <div>
+      <i class="fas fa-code"></i> Custom software · 
+      <i class="fas fa-map-pin" style="margin-left: 0.4rem;"></i> Durg, Chhattisgarh
+    </div>
+    <div>
+      <a href="#"><i class="fas fa-chevron-circle-up"></i> Back to top</a>
+    </div>
+  </div>
+
+  <!-- small extra: incorporation date reminder -->
+  <div style="margin-top: 1rem; font-size: 0.8rem; color: #6a8199; text-align: center; border-top: 1px solid #ecf3fa; padding-top: 1rem;">
+    <i class="fas fa-registered"></i> Incorporated: 27/01/2023 · Enterprise Type: Micro · Social Category: OBC
+  </div>
+
+</div>
+<!-- end container -->
+</body>
+</html>
